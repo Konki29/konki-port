@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react"; 
 import robotSvgUrl from "@/assets/robot.svg";
+import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 export function HomePage() {
   return (
@@ -38,7 +39,7 @@ export function HomePage() {
       <section className="w-full max-w-lg mx-auto animate-in fade-in slide-in-from-top-16 duration-700">
         
         <h2 className="mt-8 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
-          Work
+          Perfil Profesional
         </h2>
 
         <p className="text-lg text-muted-foreground mb-8 indent-8 text-justify">
@@ -55,7 +56,12 @@ export function HomePage() {
             </Link>
           </Button>
           <Button asChild size="default" variant="outline">
-            <a href="mailto:tu-email@correo.com">Contactar</a>
+            {/* 3. 'href' apunta al PDF en 'public'.
+                4. 'download' le dice al navegador que lo descargue.
+            */}
+            <a href="/CarlosRaulValladares_CV.pdf" download>
+              <Download className="mr-2 h-4 w-4" /> Descargar CV
+            </a>
           </Button>
         </div>
 
@@ -97,6 +103,41 @@ export function HomePage() {
         </div>
 
       </section>
+
+      {/* --- ¡NUEVA SECCIÓN DE CONTACTO! --- */}
+      <section className="w-full max-w-lg mx-auto animate-in fade-in slide-in-from-top-20 duration-700 delay-200">
+        
+        <h2 className="mt-16 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
+          Contacto
+        </h2>
+
+        {/* 3. He movido el botón de Email aquí y he añadido GitHub y LinkedIn */}
+        <div className="flex justify-start gap-4 pl-4"> 
+          
+          <Button asChild size="default" variant="outline">
+            <a href="mailto:carlosraulva2010@gmail.com">
+              <Mail className="mr-2 h-4 w-4" /> Email
+            </a>
+          </Button>
+
+          <Button asChild size="default" variant="outline">
+            {/* Usamos la URL de tu repo de GitHub que me pasaste antes */}
+            <a href="https://github.com/Konki29" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" /> GitHub
+            </a>
+          </Button>
+
+          <Button asChild size="default" variant="outline">
+            {/* ¡Recuerda cambiar 'tu-usuario' por tu URL de LinkedIn! */}
+            <a href="https://www.linkedin.com/in/carlos-valladares-892720354/" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
+            </a>
+          </Button>
+
+        </div>
+      </section>
+
+
 
     </div>
   );

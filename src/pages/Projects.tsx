@@ -14,18 +14,18 @@ import { Button } from "@/components/ui/button";
 const projectsData = [
   {
     title: "Portfolio Personal",
-    status: "En curso",
+    status: "Working on it",
     description:
       "Mi propio espacio digital para mostrar mi trayectoria y proyectos. Construido con tecnologías web modernas, enfocado en un diseño limpio y una experiencia de usuario fluida.",
     tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
-    link: "https://github.com/tu-usuario/mi-portfolio", // ¡Recuerda cambiar esto!
+    link: "https://github.com/Konki29/konki-port", 
   },
   {
     title: "Stand de eSports para Fnatic",
     status: "Abril 2025",
     description:
-      "Colaboración en el montaje del stand para la LEC Roadtrip en Madrid. Mis responsabilidades incluyeron la instalación de hardware, configuración de equipos y la interacción técnica con el equipo de Fnatic.",
-    tags: ["Hardware", "Networking", "Soporte Técnico"],
+      "Colaboración en el montaje del stand para la LEC Roadtrip en Madrid. Mis\u00A0responsabilidades incluyeron la instalación de hardware, configuración de equipos y la interacción técnica con el equipo de Fnatic.",
+    tags: ["Hardware", "Networking", "Soporte Técnico","Inglés Avanzado"],
   },
   // Puedes añadir más proyectos aquí en el futuro
   // {
@@ -66,7 +66,7 @@ export function ProjectsPage() {
                   {project.status}
                 </Badge>
               </div>
-              <CardDescription className="text-justify pt-2">{project.description}</CardDescription>
+              <CardDescription className="pt-2">{project.description}</CardDescription>
             </CardHeader>
             <CardContent className="grow" /> {/* Para empujar el footer hacia abajo */}
             <CardFooter className="flex flex-col items-start gap-4">
