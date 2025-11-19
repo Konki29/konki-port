@@ -17,15 +17,15 @@ const projectsData = [
     status: "Working on it",
     description:
       "Mi propio espacio digital para mostrar mi trayectoria y proyectos. Construido con tecnologías web modernas, enfocado en un diseño limpio y una experiencia de usuario fluida.",
-    tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
-    link: "https://github.com/Konki29/konki-port", 
+    tags: ["React", "TypeScript", "TailwindCSS", "Vite", "Three.js"],
+    link: "https://github.com/Konki29/konki-port",
   },
   {
     title: "Stand de eSports para Fnatic",
     status: "Abril 2025",
     description:
       "Colaboración en el montaje del stand para la LEC Roadtrip en Madrid. Mis\u00A0responsabilidades incluyeron la instalación de hardware, configuración de equipos y la interacción técnica con el equipo de Fnatic.",
-    tags: ["Hardware", "Networking", "Soporte Técnico","Inglés Avanzado"],
+    tags: ["Hardware", "Networking", "Soporte Técnico", "Inglés Avanzado"],
   },
   // Puedes añadir más proyectos aquí en el futuro
   // {
@@ -42,7 +42,7 @@ export function ProjectsPage() {
     <div className="w-full max-w-6xl mx-auto px-4 md:px-8 py-12">
       <div className="text-center mb-12 animate-in fade-in duration-700">
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
-          Proyectos 
+          Proyectos
         </h1>
         <p className="text-lg text-muted-foreground mt-3 max-w-2xl mx-auto">
           Una selección de trabajos donde he aplicado mis conocimientos en
