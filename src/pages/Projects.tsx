@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 const projectsData = [
   {
     title: "Portfolio Personal",
-    status: "Working on it",
+    status: "On work",
     description:
       "Mi propio espacio digital para mostrar mi trayectoria y proyectos. Construido con tecnologías web modernas, enfocado en un diseño limpio y una experiencia de usuario fluida.",
     tags: ["React", "TypeScript", "TailwindCSS", "Vite", "Three.js"],
@@ -22,10 +22,19 @@ const projectsData = [
   },
   {
     title: "Stand de eSports para Fnatic",
-    status: "Abril 2025",
+    status: "Done",
     description:
       "Colaboración en el montaje del stand para la LEC Roadtrip en Madrid. Mis\u00A0responsabilidades incluyeron la instalación de hardware, configuración de equipos y la interacción técnica con el equipo de Fnatic.",
     tags: ["Hardware", "Networking", "Soporte Técnico", "Inglés Avanzado"],
+  },
+
+  {
+    title: "sanchoGPT(nanoGPT)",
+    status: "Done",
+    description:
+      "Creación de un modelo basado en nanoGPT para entrenar una IA que pueda generar texto al estilo de cervantes.",
+    tags: ["IA", "Python", "Machine Learning", "Deep Learning", "nanoGPT"],
+    link: "https://github.com/Konki29/sanchoGPT",
   },
   // Puedes añadir más proyectos aquí en el futuro
   // {

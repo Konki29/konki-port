@@ -1,75 +1,64 @@
-# React + TypeScript + Vite
+# 🤖 Portfolio Personal - Carlos Valladares
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bienvenido al repositorio de mi portfolio personal. Este proyecto es una aplicación web moderna diseñada para mostrar mi trayectoria como **Técnico en Robótica**, mis proyectos de desarrollo de software y mi interés en la Inteligencia Artificial.
 
-Currently, two official plugins are available:
+🔗 **Ver Demo en Vivo:** [https://konki-port.vercel.app](https://konki-port.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Sobre el Proyecto
 
-## React Compiler
+Este portfolio ha sido construido desde cero utilizando las últimas tecnologías del ecosistema React. No es solo una web estática, sino una demostración de habilidades de desarrollo frontend, integrando diseño de interfaz (UI), animaciones y elementos 3D interactivos.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+### Características Principales
+* **Diseño Moderno:** Interfaz limpia y minimalista usando componentes de **Shadcn UI**.
+* **Modo Oscuro:** Tema oscuro por defecto con una paleta de colores personalizada "Stone".
+* **Elementos 3D:** Integración de **Three.js** y **React Three Fiber** para visualizaciones interactivas (Robot Orb).
+* **Animaciones:** Transiciones suaves y micro-interacciones.
+* **Responsive:** Totalmente adaptado a dispositivos móviles y escritorio.
 
-Note: This will impact Vite dev & build performances.
+## 🛠️ Stack Tecnológico
 
-## Expanding the ESLint configuration
+Este proyecto utiliza herramientas de vanguardia:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* **Core:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) (Configuración moderna con `@theme`)
+* **Componentes UI:** [Shadcn/ui](https://ui.shadcn.com/) (basado en Radix UI)
+* **3D & Gráficos:**
+    * `@react-three/fiber` & `@react-three/drei` (Three.js para React)
+    * `lucide-react` (Iconografía)
+* **Routing:** React Router v7
+* **Despliegue:** Vercel (CI/CD automático)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📦 Instalación y Uso Local
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Si quieres ejecutar este proyecto en tu máquina local:
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone [https://github.com/Konki29/konki-port.git](https://github.com/Konki29/konki-port.git)
+    cd konki-port
+    ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+2.  **Instalar dependencias:**
+    ```bash
+    npm install
+    ```
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+3.  **Iniciar el servidor de desarrollo:**
+    ```bash
+    npm run dev
+    ```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+4.  Abrir `http://localhost:5173/` en tu navegador.
+
+## 📂 Estructura del Proyecto
+
+```text
+src/
+├── assets/        # Imágenes, SVGs y modelos (robot.svg, face.jpg)
+├── components/    # Componentes reutilizables
+│   ├── 3d/        # Componentes Three.js (RobotCanvas)
+│   └── ui/        # Componentes base de Shadcn (Button, Card, Badge)
+├── pages/         # Páginas principales (Home, Projects)
+├── lib/           # Utilidades (cn helper)
+└── index.css      # Configuración de Tailwind v4 y temas
