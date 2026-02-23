@@ -8,19 +8,19 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 export function HomePage() {
   return (
     <div className="w-full px-8 grow flex flex-col justify-center">
-      <section className="w-full max-w-lg mx-auto flex justify-center py-4 animate-in fade-in slide-in-from-top-12 duration-700">
+      <section className="w-full max-w-2xl mx-auto flex justify-center py-4 animate-in fade-in slide-in-from-top-12 duration-700">
         <RobotCanvas />
       </section>
 
       {/* SECCIÓN SUPERIOR: Foto */}
-      <section className="flex flex-col md:flex-row items-center justify-between py-16 w-full max-w-lg mx-auto">
+      <section className="flex flex-col md:flex-row items-center justify-between py-16 w-full max-w-2xl mx-auto">
 
         <div className="text-center md:text-left animate-in fade-in slide-in-from-top-12 duration-700">
           <h1 className="text-3xl md:text-4xl font-bold tracking-tighter whitespace-nowrap">
             Carlos Valladares
           </h1>
           <p className="text-lg text-muted-foreground mt-3">
-            Técnico en Robótica (Developer / Artista)
+            Ingeniero en Robótica (Developer / Artista)
           </p>
         </div>
 
@@ -37,7 +37,7 @@ export function HomePage() {
       </section>
 
       {/* SECCIÓN "WORK" */}
-      <section className="w-full max-w-lg mx-auto animate-in fade-in slide-in-from-top-16 duration-700">
+      <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-16 duration-700">
 
         <h2 className="mt-8 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
           Perfil Profesional
@@ -57,7 +57,7 @@ export function HomePage() {
             </Link>
           </Button>
           <Button asChild size="default" variant="outline">
-            <a href="/CarlosRaulValladares_CV.pdf" download>
+            <a href="/CV_Carlos-Valladares.pdf" download>
               <Download className="mr-2 h-4 w-4" /> Descargar CV
             </a>
           </Button>
@@ -66,41 +66,68 @@ export function HomePage() {
       </section>
 
       {/* SECCIÓN EXPERIENCIA */}
-      <section className="w-full max-w-lg mx-auto animate-in fade-in slide-in-from-top-20 duration-700 ">
+      <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-20 duration-700 ">
 
         <h2 className="mt-16 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
           Experiencia
         </h2>
 
-        <div className="pl-4">
-          <div className="flex justify-between items-baseline">
+        <div className="pl-4 space-y-6">
 
-            <h3 className="text-lg font-semibold text-foreground">
-              Fnatic
-            </h3>
+          {/* Prácticas en la USC */}
+          <div>
+            <div className="flex justify-between items-baseline">
+              <h3 className="text-lg font-semibold text-foreground">
+                USC — Investigador en Prácticas (I+D)
+              </h3>
+              <span className="text-sm text-muted-foreground whitespace-nowrap ml-4">
+                Feb. – Jun. 2025
+              </span>
+            </div>
 
-            <span className="text-sm text-muted-foreground">
-              Abril 2025
-            </span>
+            <p className="text-muted-foreground mt-1">
+              Contrato de prácticas en la{" "}
+              <strong className="text-foreground">Universidad de Santiago de Compostela</strong>.
+              Participación en estudio biomecánico para el desarrollo de modelos de fatiga muscular,
+              adquisición y procesamiento de bioseñales mediante sensores{" "}
+              <strong className="text-foreground">EMG</strong> y captura de datos de movimiento con
+              sensores inerciales (<strong className="text-foreground">IMUs</strong>).
+            </p>
+            <p className="text-xs text-muted-foreground mt-1">
+              Python · MATLAB · Sensores Biomédicos · Procesamiento de Señales
+            </p>
           </div>
 
-          <p className="text-muted-foreground">
-            Montaje del Stand de eSports en la <a
-              href="https://lolesports.com/es-ES/news/introducing-lec-roadtrip"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-semibold text-destructive hover:underline underline-offset-4"
-            >
-              LEC Roadtrip
-            </a> de Madrid 2025, incluyendo
-            instalación de hardware, configuración e interacion con el equipo de Fnatic en inglés.
-          </p>
+          {/* Fnatic */}
+          <div>
+            <div className="flex justify-between items-baseline">
+              <h3 className="text-lg font-semibold text-foreground">
+                Fnatic
+              </h3>
+              <span className="text-sm text-muted-foreground">
+                Abril 2025
+              </span>
+            </div>
+
+            <p className="text-muted-foreground mt-1">
+              Montaje del Stand de eSports en la <a
+                href="https://lolesports.com/es-ES/news/introducing-lec-roadtrip"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-destructive hover:underline underline-offset-4"
+              >
+                LEC Roadtrip
+              </a> de Madrid 2025, incluyendo
+              instalación de hardware, configuración e interacción con el equipo de Fnatic en inglés.
+            </p>
+          </div>
+
         </div>
 
       </section>
 
       {/* SECCIÓN DE CONTACTO */}
-      <section className="w-full max-w-lg mx-auto animate-in fade-in slide-in-from-top-20 duration-700 delay-200">
+      <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-20 duration-700 delay-200">
 
         <h2 className="mt-16 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
           Contacto
@@ -121,7 +148,7 @@ export function HomePage() {
           </Button>
 
           <Button asChild size="default" variant="outline">
-            <a href="https://www.linkedin.com/in/carlos-valladares-892720354/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/carlos-v-892720354/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="mr-2 h-4 w-4" /> LinkedIn
             </a>
           </Button>
