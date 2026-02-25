@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MoveRight } from "lucide-react";
 import RobotCanvas from "@/components/3d/RobotCanvas";
 import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { TextScramble } from "@/components/TextScramble";
 
 export function HomePage() {
   return (
@@ -12,20 +13,20 @@ export function HomePage() {
         <RobotCanvas />
       </section>
 
-      {/* SECCIÓN SUPERIOR: Foto */}
+      {/* ════ HERO ════ */}
       <section className="flex flex-col md:flex-row items-center justify-between py-16 w-full max-w-2xl mx-auto">
 
         <div className="text-center md:text-left animate-in fade-in slide-in-from-top-12 duration-700">
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tighter whitespace-nowrap">
-            Carlos Valladares
+          <h1 className="text-3xl md:text-4xl font-serif font-bold tracking-tight">
+            <TextScramble text="Carlos Valladares" speed={45} />
           </h1>
-          <p className="text-lg text-muted-foreground mt-3">
-            Ingeniero en Robótica (Developer / Artista)
+          <p className="text-sm font-mono text-primary mt-3 tracking-wider uppercase">
+            <TextScramble text="Ingeniero en Robótica · Dev · Artista" speed={30} delay={800} />
           </p>
         </div>
 
         <div className="shrink-0 flex justify-center animate-in fade-in slide-in-from-right-12 duration-700">
-          <div className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-primary shadow-lg">
+          <div className="relative w-24 h-24 overflow-hidden border border-primary/30">
             <img
               src="/face.jpg"
               alt="Carlos Valladares"
@@ -36,23 +37,28 @@ export function HomePage() {
 
       </section>
 
-      {/* SECCIÓN "WORK" */}
+      {/* ════ SOBRE MÍ ════ */}
       <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-16 duration-700">
 
-        <h2 className="mt-8 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
-          Perfil Profesional
+        <h2 className="mt-8 mb-6 text-lg font-serif font-semibold text-primary tracking-wide">
+          Especificaciones
         </h2>
 
-        <p className="text-lg text-muted-foreground mb-8 indent-8 text-justify">
-          Estudié el grado de Robótica en la <strong className="text-foreground">USC</strong>,
-          donde adquirí aptitudes en sistemas autónomos, visión artificial y desarrollo
-          de hardware. Aquí puedes ver los proyectos donde aplico esos conocimientos.
-        </p>
+        <div className="space-y-4 border-l border-primary/20 pl-6">
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Estudié el grado de Robótica en la <strong className="text-foreground">USC</strong>,
+            donde adquirí aptitudes en sistemas autónomos, visión artificial y desarrollo
+            de hardware.
+          </p>
+          <p className="text-sm text-muted-foreground leading-relaxed">
+            Aquí puedes ver los proyectos donde aplico esos conocimientos.
+          </p>
+        </div>
 
-        <div className="flex justify-start gap-4">
+        <div className="flex justify-start gap-4 mt-8">
           <Button asChild size="default">
             <Link to="/proyectos">
-              Ver mis proyectos
+              Acceder a módulos
               <MoveRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
@@ -65,27 +71,28 @@ export function HomePage() {
 
       </section>
 
-      {/* SECCIÓN EXPERIENCIA */}
+      {/* ════ EXPERIENCIA ════ */}
       <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-20 duration-700 ">
 
-        <h2 className="mt-16 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
+        <h2 className="mt-16 mb-6 text-lg font-serif font-semibold text-primary tracking-wide">
           Experiencia
         </h2>
 
-        <div className="pl-4 space-y-6">
+        <div className="pl-6 space-y-8 border-l border-primary/20">
 
           {/* Prácticas en la USC */}
-          <div>
+          <div className="relative pl-4">
+            <div className="absolute -left-[calc(0.375rem+1px)] top-1.5 w-1.5 h-1.5 bg-primary" />
             <div className="flex justify-between items-baseline">
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="text-base font-serif font-semibold text-foreground">
                 USC — Investigador en Prácticas (I+D)
               </h3>
-              <span className="text-sm text-muted-foreground whitespace-nowrap ml-4">
-                Feb. – Jun. 2025
+              <span className="text-xs font-mono text-muted-foreground whitespace-nowrap ml-4">
+                FEB–JUN.2025
               </span>
             </div>
 
-            <p className="text-muted-foreground mt-1">
+            <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
               Contrato de prácticas en la{" "}
               <strong className="text-foreground">Universidad de Santiago de Compostela</strong>.
               Participación en estudio biomecánico para el desarrollo de modelos de fatiga muscular,
@@ -93,28 +100,29 @@ export function HomePage() {
               <strong className="text-foreground">EMG</strong> y captura de datos de movimiento con
               sensores inerciales (<strong className="text-foreground">IMUs</strong>).
             </p>
-            <p className="text-xs text-muted-foreground mt-1">
+            <p className="text-[10px] font-mono text-primary/60 mt-2 uppercase tracking-wider">
               Python · MATLAB · Sensores Biomédicos · Procesamiento de Señales
             </p>
           </div>
 
           {/* Fnatic */}
-          <div>
+          <div className="relative pl-4">
+            <div className="absolute -left-[calc(0.375rem+1px)] top-1.5 w-1.5 h-1.5 bg-primary" />
             <div className="flex justify-between items-baseline">
-              <h3 className="text-lg font-semibold text-foreground">
+              <h3 className="text-base font-serif font-semibold text-foreground">
                 Fnatic
               </h3>
-              <span className="text-sm text-muted-foreground">
-                Abril 2025
+              <span className="text-xs font-mono text-muted-foreground">
+                ABR.2025
               </span>
             </div>
 
-            <p className="text-muted-foreground mt-1">
+            <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
               Montaje del Stand de eSports en la <a
                 href="https://lolesports.com/es-ES/news/introducing-lec-roadtrip"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-semibold text-destructive hover:underline underline-offset-4"
+                className="font-semibold text-primary hover:underline underline-offset-4"
               >
                 LEC Roadtrip
               </a> de Madrid 2025, incluyendo
@@ -126,14 +134,14 @@ export function HomePage() {
 
       </section>
 
-      {/* SECCIÓN DE CONTACTO */}
-      <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-20 duration-700 delay-200">
+      {/* ════ CONTACTO ════ */}
+      <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-20 duration-700 delay-200 pb-16">
 
-        <h2 className="mt-16 mb-4 text-sm font-semibold tracking-widest uppercase text-muted-foreground underline underline-offset-4">
+        <h2 className="mt-16 mb-6 text-lg font-serif font-semibold text-primary tracking-wide">
           Contacto
         </h2>
 
-        <div className="flex justify-start gap-4 pl-4">
+        <div className="flex justify-start gap-4 pl-6">
 
           <Button asChild size="default" variant="outline">
             <a href="mailto:carlosraulva2010@gmail.com">

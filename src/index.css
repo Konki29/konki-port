@@ -1,66 +1,62 @@
-/* 1. Importa el "reset" de T4 (reemplaza a @tailwind base) */
+/* 1. Tailwind v4 imports */
 @import "tailwindcss";
-
-/* 2. Importa la NUEVA animación (reemplaza a tailwindcss-animate) */
-@import "tw-animate-css"; 
+@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
-/* 4. Define las variables de color (estilo T4/Shadcn) */
+/* ═══════════════════════════════════════════════════════
+   NERV MINIMALISTA — COLOR PALETTE
+   ═══════════════════════════════════════════════════════ */
+
 :root {
-  /* Estas son las variables "Stone" (claras) CORRECTAS */
-  --background: hsl(30, 63%, 71%);
-  --foreground: hsl(30, 33%, 98%);
-  --card: hsl(20 11.1% 94.9%);
-  --card-foreground: hsl(20 8.3% 20.2%);
-  --popover: hsl(20 11.1% 94.9%);
-  --popover-foreground: hsl(20 8.3% 20.2%);
-  --primary: hsl(24.6 95% 53.1%);
-  --primary-foreground: hsl(60 9.1% 97.8%);
-  --secondary: hsl(20 4.8% 90.2%);
-  --secondary-foreground: hsl(20 8.3% 20.2%);
-  --muted: hsl(20 4.8% 90.2%);
-  --muted-foreground: hsl(20 5.1% 40.2%);
-  --accent: hsl(20 4.8% 90.2%);
-  --accent-foreground: hsl(20 8.3% 20.2%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(60 9.1% 97.8%);
-  --border: hsl(20 5.9% 85.1%);
-  --input: hsl(20 5.9% 85.1%);
-  --ring: hsl(24.6 95% 53.1%);
-  --radius: 0.5rem;
+  --background: #0a0a0a;
+  --foreground: #e0e0e0;
+  --card: transparent;
+  --card-foreground: #e0e0e0;
+  --popover: #0a0a0a;
+  --popover-foreground: #e0e0e0;
+  --primary: #ffb800;
+  /* Technical Amber */
+  --primary-foreground: #0a0a0a;
+  --secondary: #141414;
+  --secondary-foreground: #999999;
+  --muted: #141414;
+  --muted-foreground: #777777;
+  --accent: #1a1a1a;
+  --accent-foreground: #e0e0e0;
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: #ffffff;
+  --border: #222222;
+  --input: #222222;
+  --ring: #ffb800;
+  --radius: 0rem;
 }
 
 .dark {
-  /* Fondo: Un gris oscuro (como el de Gemini), no negro */
-  --background: hsl(240 5% 12%); 
-
-  /* Texto: Un blanco claro, no gris oscuro */
-  --foreground: hsl(0 0% 95%); 
-
-  /* Podemos definir el resto de colores para que coincidan.
-    (He copiado los valores de 'Stone' y los he invertido para modo oscuro)
-  */
-  --card: hsl(20 5.9% 15.1%);
-  --card-foreground: hsl(0 0% 95%);
-  --popover: hsl(20 5.9% 15.1%);
-  --popover-foreground: hsl(0 0% 95%);
-  --primary: hsl(24.6 95% 53.1%);
-  --primary-foreground: hsl(60 9.1% 97.8%);
-  --secondary: hsl(20 5.9% 20.1%);
-  --secondary-foreground: hsl(0 0% 95%);
-  --muted: hsl(20 5.9% 20.1%);
-  --muted-foreground: hsl(20 5.1% 60.2%);
-  --accent: hsl(20 5.9% 20.1%);
-  --accent-foreground: hsl(0 0% 95%);
-  --destructive: hsl(0 84.2% 60.2%);
-  --destructive-foreground: hsl(60 9.1% 97.8%);
-  --border: hsl(20 5.9% 25.1%);
-  --input: hsl(20 5.9% 25.1%);
-  --ring: hsl(24.6 95% 53.1%);
+  --background: #0a0a0a;
+  --foreground: #e0e0e0;
+  --card: transparent;
+  --card-foreground: #e0e0e0;
+  --popover: #0a0a0a;
+  --popover-foreground: #e0e0e0;
+  --primary: #ffb800;
+  --primary-foreground: #0a0a0a;
+  --secondary: #141414;
+  --secondary-foreground: #999999;
+  --muted: #141414;
+  --muted-foreground: #777777;
+  --accent: #1a1a1a;
+  --accent-foreground: #e0e0e0;
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: #ffffff;
+  --border: #222222;
+  --input: #222222;
+  --ring: #ffb800;
 }
 
-/* 5. APLICA las variables al @theme (¡la magia de T4!) */
+/* ═══════════════════════════════════════════════════════
+   MAP TO TAILWIND v4 @theme
+   ═══════════════════════════════════════════════════════ */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -82,4 +78,43 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --radius: var(--radius);
+
+  /* Amber accent token */
+  --color-amber: #ffb800;
+
+  /* Font families */
+  --font-serif: 'Crimson Pro', Georgia, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', monospace;
+}
+
+/* ═══════════════════════════════════════════════════════
+   BODY — CLEAN CARBON VOID
+   ═══════════════════════════════════════════════════════ */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* ═══════════════════════════════════════════════════════
+   SCANLINES — ULTRA SUBTLE (opacity 0.03)
+   ═══════════════════════════════════════════════════════ */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(0deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SELECTION HIGHLIGHT
+   ═══════════════════════════════════════════════════════ */
+::selection {
+  background: rgba(255, 184, 0, 0.25);
+  color: #ffffff;
 }
