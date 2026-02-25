@@ -63,7 +63,7 @@ export function HomePage() {
             </Link>
           </Button>
           <Button asChild size="default" variant="outline">
-            <a href="/CV_Carlos-Valladares.pdf" download>
+            <a href="/CV-Carlos-Valladares.pdf" download>
               <Download className="mr-2 h-4 w-4" /> Descargar CV
             </a>
           </Button>
