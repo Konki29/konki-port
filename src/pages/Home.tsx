@@ -41,7 +41,7 @@ export function HomePage() {
       <section className="w-full max-w-2xl mx-auto animate-in fade-in slide-in-from-top-16 duration-700">
 
         <h2 className="mt-8 mb-6 text-lg font-serif font-semibold text-primary tracking-wide">
-          Especificaciones
+          Sobre mí
         </h2>
 
         <div className="space-y-4 border-l border-primary/20 pl-6">
