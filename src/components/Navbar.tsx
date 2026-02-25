@@ -16,10 +16,10 @@ export function Navbar() {
         {/* Nav Links — wrapped in [ ] brackets */}
         <div className="flex gap-1">
           <Button asChild variant="ghost" size="sm">
-            <Link to="/" className="font-mono text-xs uppercase tracking-[0.15em]">[ Núcleo ]</Link>
+            <Link to="/" className="font-mono text-xs uppercase tracking-[0.15em]">[ Inicio ]</Link>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link to="/proyectos" className="font-mono text-xs uppercase tracking-[0.15em]">[ Módulos ]</Link>
+            <Link to="/proyectos" className="font-mono text-xs uppercase tracking-[0.15em]">[ Proyectos ]</Link>
           </Button>
         </div>
 

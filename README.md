@@ -1,64 +1,68 @@
-# 🤖 Portfolio Personal - Carlos Valladares
+# Portfolio Personal — Carlos Valladares
 
-Bienvenido al repositorio de mi portfolio personal. Este proyecto es una aplicación web moderna diseñada para mostrar mi trayectoria como **Técnico en Robótica**, mis proyectos de desarrollo de software y mi interés en la Inteligencia Artificial.
+Repositorio del portfolio personal. Aplicación web construida con React, TypeScript y Three.js para presentar mi trayectoria como Ingeniero en Robótica, proyectos de desarrollo de software e investigación en Inteligencia Artificial.
 
-🔗 **Ver Demo en Vivo:** [https://konki-port.vercel.app](https://konki-port.vercel.app)
+**Demo:** [https://konki-port.vercel.app](https://konki-port.vercel.app)
 
-## 🚀 Sobre el Proyecto
+---
 
-Este portfolio ha sido construido desde cero utilizando las últimas tecnologías del ecosistema React. No es solo una web estática, sino una demostración de habilidades de desarrollo frontend, integrando diseño de interfaz (UI), animaciones y elementos 3D interactivos.
+## Sobre el Proyecto
 
-### Características Principales
-* **Diseño Moderno:** Interfaz limpia y minimalista usando componentes de **Shadcn UI**.
-* **Modo Oscuro:** Tema oscuro por defecto con una paleta de colores personalizada "Stone".
-* **Elementos 3D:** Integración de **Three.js** y **React Three Fiber** para visualizaciones interactivas (Robot Orb).
-* **Animaciones:** Transiciones suaves y micro-interacciones.
-* **Responsive:** Totalmente adaptado a dispositivos móviles y escritorio.
+Portfolio desarrollado desde cero con el ecosistema React moderno. Integra diseño editorial minimalista, tipografía serif/monospace, y elementos 3D interactivos en WebGL.
 
-## 🛠️ Stack Tecnológico
+### Características
 
-Este proyecto utiliza herramientas de vanguardia:
+- Estética NERV Minimalista y Editorial (Crimson Pro + JetBrains Mono)
+- Elementos 3D con Three.js y React Three Fiber (wireframe hologram)
+- Paleta de color reducida: carbón `#0a0a0a` + ámbar técnico `#ffb800`
+- Componentes base Shadcn UI (Radix UI)
+- Diseño responsive (mobile + desktop)
+- Scanlines sutiles y micro-animaciones
 
-* **Core:** [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
-* **Build Tool:** [Vite](https://vitejs.dev/)
-* **Estilos:** [Tailwind CSS v4](https://tailwindcss.com/) (Configuración moderna con `@theme`)
-* **Componentes UI:** [Shadcn/ui](https://ui.shadcn.com/) (basado en Radix UI)
-* **3D & Gráficos:**
-    * `@react-three/fiber` & `@react-three/drei` (Three.js para React)
-    * `lucide-react` (Iconografía)
-* **Routing:** React Router v7
-* **Despliegue:** Vercel (CI/CD automático)
+---
 
-## 📦 Instalación y Uso Local
+## Stack Tecnológico
 
-Si quieres ejecutar este proyecto en tu máquina local:
+| Categoría | Tecnología |
+|---|---|
+| Core | React 19, TypeScript |
+| Build | Vite 7 |
+| Estilos | Tailwind CSS v4 (`@theme` config) |
+| Componentes | Shadcn/ui (Radix UI) |
+| 3D | `@react-three/fiber`, `@react-three/drei` |
+| Iconografía | Lucide React |
+| Routing | React Router v7 |
+| Despliegue | Vercel (CI/CD) |
 
-1.  **Clonar el repositorio:**
-    ```bash
-    git clone [https://github.com/Konki29/konki-port.git](https://github.com/Konki29/konki-port.git)
-    cd konki-port
-    ```
+---
 
-2.  **Instalar dependencias:**
-    ```bash
-    npm install
-    ```
+## Instalación Local
 
-3.  **Iniciar el servidor de desarrollo:**
-    ```bash
-    npm run dev
-    ```
+```bash
+# 1. Clonar el repositorio
+git clone https://github.com/Konki29/konki-port.git
+cd konki-port
 
-4.  Abrir `http://localhost:5173/` en tu navegador.
+# 2. Instalar dependencias
+npm install
 
-## 📂 Estructura del Proyecto
+# 3. Iniciar servidor de desarrollo
+npm run dev
+```
+
+El servidor estará disponible en `http://localhost:5173/`.
+
+---
+
+## Estructura del Proyecto
 
 ```text
 src/
-├── assets/        # Imágenes, SVGs y modelos (robot.svg, face.jpg)
-├── components/    # Componentes reutilizables
+├── assets/        # Recursos estáticos (SVGs, imágenes)
+├── components/
 │   ├── 3d/        # Componentes Three.js (RobotCanvas)
-│   └── ui/        # Componentes base de Shadcn (Button, Card, Badge)
-├── pages/         # Páginas principales (Home, Projects)
+│   └── ui/        # Componentes base Shadcn (Button, Card, Badge)
+├── pages/         # Páginas (Home, Projects)
 ├── lib/           # Utilidades (cn helper)
-└── index.css      # Configuración de Tailwind v4 y temas
+└── index.css      # Tokens de diseño y configuración Tailwind v4
+```

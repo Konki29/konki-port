@@ -42,13 +42,13 @@ export function ProjectsPage() {
     <div className="w-full max-w-6xl mx-auto px-4 md:px-8 py-12">
       <div className="text-center mb-12 animate-in fade-in duration-700">
         <p className="text-xs font-mono font-semibold tracking-[0.2em] uppercase text-primary mb-4">
-          SISTEMA · MÓDULOS
+          SISTEMA · PROYECTOS
         </p>
         <h1 className="text-4xl font-serif font-bold tracking-tight sm:text-5xl">
-          <TextScramble text="Módulos de Sistema" speed={40} />
+          <TextScramble text="Proyectos de Sistema" speed={40} />
         </h1>
         <p className="text-sm font-mono text-muted-foreground mt-3 max-w-2xl mx-auto">
-          Una selección de módulos donde he aplicado mis conocimientos en
+          Una selección de proyectos donde he aplicado mis conocimientos en
           robótica, desarrollo y más.
         </p>
       </div>
