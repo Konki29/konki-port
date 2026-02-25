@@ -8,50 +8,54 @@
    NERV MINIMALISTA — COLOR PALETTE
    ═══════════════════════════════════════════════════════ */
 
+/* ── Light Mode ── */
 :root {
-  --background: #0a0a0a;
-  --foreground: #e0e0e0;
+  --background: #faf8f5;
+  --foreground: #0d1e31;
   --card: transparent;
-  --card-foreground: #e0e0e0;
-  --popover: #0a0a0a;
-  --popover-foreground: #e0e0e0;
-  --primary: #ffb800;
-  /* Technical Amber */
-  --primary-foreground: #0a0a0a;
-  --secondary: #141414;
-  --secondary-foreground: #999999;
-  --muted: #141414;
-  --muted-foreground: #777777;
-  --accent: #1a1a1a;
-  --accent-foreground: #e0e0e0;
+  --card-foreground: #0d1e31;
+  --popover: #faf8f5;
+  --popover-foreground: #0d1e31;
+  --primary: #b85c38;
+  /* Warm terracotta — readable on cream */
+  --primary-foreground: #ffffff;
+  --secondary: #f0ece6;
+  --secondary-foreground: #4a5568;
+  --muted: #f0ece6;
+  --muted-foreground: #6b7280;
+  --accent: #e8e4dd;
+  --accent-foreground: #0d1e31;
   --destructive: hsl(0 72% 51%);
   --destructive-foreground: #ffffff;
-  --border: #222222;
-  --input: #222222;
-  --ring: #ffb800;
+  --border: #d6d0c6;
+  --input: #d6d0c6;
+  --ring: #b85c38;
   --radius: 0rem;
+  --scanline-color: rgba(0, 0, 0, 0.02);
 }
 
+/* ── Dark Mode ── */
 .dark {
-  --background: #0a0a0a;
-  --foreground: #e0e0e0;
+  --background: #0d1e31;
+  --foreground: #df6d6d;
   --card: transparent;
-  --card-foreground: #e0e0e0;
-  --popover: #0a0a0a;
-  --popover-foreground: #e0e0e0;
-  --primary: #ffb800;
-  --primary-foreground: #0a0a0a;
-  --secondary: #141414;
-  --secondary-foreground: #999999;
-  --muted: #141414;
-  --muted-foreground: #777777;
-  --accent: #1a1a1a;
-  --accent-foreground: #e0e0e0;
+  --card-foreground: #df6d6d;
+  --popover: #0d1e31;
+  --popover-foreground: #df6d6d;
+  --primary: #df6d6d;
+  --primary-foreground: #0d1e31;
+  --secondary: #142640;
+  --secondary-foreground: #a0aec0;
+  --muted: #142640;
+  --muted-foreground: #7a8ba0;
+  --accent: #1a2f4a;
+  --accent-foreground: #df6d6d;
   --destructive: hsl(0 72% 51%);
   --destructive-foreground: #ffffff;
-  --border: #222222;
-  --input: #222222;
-  --ring: #ffb800;
+  --border: #1e3550;
+  --input: #1e3550;
+  --ring: #df6d6d;
+  --scanline-color: rgba(223, 109, 109, 0.03);
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -105,8 +109,8 @@ body::after {
   background: repeating-linear-gradient(0deg,
       transparent,
       transparent 2px,
-      rgba(255, 255, 255, 0.03) 2px,
-      rgba(255, 255, 255, 0.03) 4px);
+      var(--scanline-color) 2px,
+      var(--scanline-color) 4px);
   pointer-events: none;
   z-index: 9999;
 }
