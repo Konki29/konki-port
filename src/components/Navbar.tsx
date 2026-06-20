@@ -3,8 +3,13 @@ import { Button } from "@/components/ui/button";
 import { Sun, Moon } from "lucide-react";
 import { useEffect, useState } from "react";
 import robotSvgUrl from "@/assets/robot.svg";
+import { useLanguage } from "@/context/LanguageContext";
+import { translations } from "@/lib/translations";
 
 export function Navbar() {
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language];
+
   const [isDark, setIsDark] = useState(() => {
     if (typeof window !== "undefined") {
       return document.documentElement.classList.contains("dark");
@@ -33,16 +38,27 @@ export function Navbar() {
             alt="Robot"
             className="w-7 h-7 opacity-70 hover:opacity-100 transition-opacity duration-300 dark:invert"
           />
-          Carlos Valladares
+          {t.home.name}
         </Link>
 
-        {/* Nav Links + Theme Toggle */}
+        {/* Nav Links + Language + Theme Toggle */}
         <div className="flex items-center gap-1">
           <Button asChild variant="ghost" size="sm">
-            <Link to="/" className="font-mono text-xs uppercase tracking-[0.15em]">[ Inicio ]</Link>
+            <Link to="/" className="font-mono text-xs uppercase tracking-[0.15em]">{t.nav.home}</Link>
           </Button>
           <Button asChild variant="ghost" size="sm">
-            <Link to="/proyectos" className="font-mono text-xs uppercase tracking-[0.15em]">[ Proyectos ]</Link>
+            <Link to="/proyectos" className="font-mono text-xs uppercase tracking-[0.15em]">{t.nav.projects}</Link>
+          </Button>
+
+          {/* Language Toggle */}
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleLanguage}
+            aria-label={t.nav.langAria}
+            className="font-mono text-xs uppercase tracking-[0.15em]"
+          >
+            {language === "es" ? "[ EN ]" : "[ ES ]"}
           </Button>
 
           {/* Theme Toggle */}
@@ -50,7 +66,7 @@ export function Navbar() {
             variant="ghost"
             size="icon"
             onClick={() => setIsDark(!isDark)}
-            aria-label={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+            aria-label={isDark ? t.nav.themeDark : t.nav.themeLight}
             className="ml-2"
           >
             {isDark ? (
